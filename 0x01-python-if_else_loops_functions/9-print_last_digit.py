@@ -1,6 +1,4 @@
-#!/usr/bin/python3
 def print_last_digit(number):
-    number == n
-    n = n < 0 and -n % 10 or n % 10
-    print(n, end='')
-    return n
+    number = number < 0 and -number % 10 or number % 10
+    print(number, end='')
+    return number
