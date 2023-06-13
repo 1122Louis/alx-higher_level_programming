@@ -1,25 +1,49 @@
-#include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "lists.h"
+/**
+ * is_palindrome - palindrome of singly linked list
+ * @head: pointer to pointer to the first node of listint_t list
+ *
+ * Return: return 1 if it's palindrome otherwise 0
+ */
+
 int is_palindrome(listint_t **head)
 {
-	listint_t *p; 
-	int i, j, *data = NULL, palindrome = 1;
+	listint_t *current;
+	unsigned int len = 0, i = 0, flag = 1, lastidx, *buf;
 
-	if (head == NULL || *head == NULL)
+	current = *head;
+	if (*head == NULL || head == NULL)
 		return (1);
 
-	for (j = 0, p = *head; p; p = p->next)
-		j++;
+	while (current != NULL)
+	{
+		current = current->next;
+		len++;
+	}
 
-	data = malloc(j * sizeof(int));
+	buf = malloc(sizeof(int) * len);
+	if (buf == NULL)
+		return (1);
 
-	for (i = 0, p = *head; p; p = p->next, i++)
-		data[i] = p->n;
+	current = *head;
+	while (current != NULL)
+	{
+		buf[i] = current->n;
+		i++;
+		current = current->next;
+	}
 
-	for (i = 0, j -= 1; i < j && palindrome; i++, j--)
-		palindrome = data[i] == data[j];
-
-	free(data);
-	return (palindrome);
+	lastidx = len - 1;
+	for (i = 0; i < len / 2; i++)
+	{
+		if (buf[i] != buf[lastidx - i])
+		{
+			flag = 0;
+			break;
+		}
+	}
+	free(buf);
+	return (flag);
 }
