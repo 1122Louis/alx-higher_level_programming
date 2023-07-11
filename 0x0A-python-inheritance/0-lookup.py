@@ -1,16 +1,11 @@
-
-dule 0-lookup
-Find the available attributes and methods of an object
+#!/usr/bin/python3
+# 0-lookup.py
+# Carlos Barros <1543@holbertonschool.com>
+""" File name : 0-lookup.py
+    It is not allowed to import any module
 """
 
 
 def lookup(obj):
-    """Return the available attributes and methods of an object
-
-    Args:
-        obj: object to check
-
-    Return:
-        a list object
-    """
+    """ A list object"""
     return dir(obj)
