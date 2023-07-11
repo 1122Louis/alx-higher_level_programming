@@ -1,16 +1,15 @@
-
-dule 0-lookup
-Find the available attributes and methods of an object
+    on that returns the list of
+    available attributes and methods of an object:
 """
 
 
 def lookup(obj):
-    """Return the available attributes and methods of an object
+    """List available attributes and methods of an object
 
     Args:
-        obj: object to check
+        obj (object): object to list its attributes and methods
 
-    Return:
+    Returns:
         a list object
     """
-    return dir(obj)
+    return (dir(obj))ir(obj)
