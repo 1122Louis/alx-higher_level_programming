@@ -1,23 +1,16 @@
 #!/usr/bin/python3
-
+# 7-save_to_json_file.py
+""" File name : 7-save_to_json_file.py
 """
-Module 7-add_item
-Save command line arguments to a file
-"""
+import json
 
 
-if __name__ == "__main__":
-    save_json_file = __import__('5-save_to_json_file').save_to_json_file
-    load_json_file = __import__('6-load_from_json_file').load_from_json_file
-    filename = "add_item.json"
+def save_to_json_file(my_obj, filename):
+    """save_to_json_file writes an Object to a text file
 
-    import sys
-
-    lst = []
-
-    try:
-        lst = load_json_file(filename)
-    except FileNotFoundError:
-        pass
-    finally:
-        save_json_file(lst + sys.argv[1:], filename)
+    Args:
+        my_obj (obj): any object for example list, dict
+        filename: file name
+    """
+    with open(filename, 'w', encoding='utf-8') as f:
+        return(json.dump(my_obj, f))
