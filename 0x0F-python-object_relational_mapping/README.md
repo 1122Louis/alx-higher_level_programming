@@ -1,6 +1,10 @@
 0x0F. Python - Object-relational mapping
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d0b366e343834a271a52e51d36e6a23abed20880
 Before you start…
 Please make sure your MySQL server is in 8.0 -> How to install MySQL 8.0 in Ubuntu 20.04
 
@@ -841,5 +845,8 @@ Repo:
 GitHub repository: alx-higher_level_programming
 Directory: 0x0F-python-object_relational_mapping
 File: 102-relationship_cities_states_list.py
+<<<<<<< HEAD
    
 
+=======
+>>>>>>> d0b366e343834a271a52e51d36e6a23abed20880
